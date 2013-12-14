@@ -1,0 +1,104 @@
+Code,Subject,Course,Credits,Course Name,Pre-requ
+ASIA,Asian Studies,410,3,International Relations in Pre-modern East Asia,n
+ASIA,Asian Studies,430,3,International Relations in Modern East Asia: Korea and Japan,n
+EOSC,Earth and Ocean Sciences,340,3,Global Climate Change,y
+GRSJ,"Gender, Race, Sexuality and Social Justice",305,3,Issues in Community and International Organizing,n
+GRSJ,"Gender, Race, Sexuality and Social Justice",326,3,"The Politics of Gender, Families, and Nation-Building",n
+GEOG,Geography,316,3,Geography of Natural Hazards,y
+GEOG,Geography,329,3,Introduction to Political Geography,n
+GEOG,Geography,453,3,Political Geographic Analysis,n
+HIST,History,310,3,The British Empire to 1850�,n
+HIST,History,311,3,The British Empire after 1850,n
+HIST,History,395,3,"The Nuclear Century: Scientists, Atoms, and the World Order Since 1900",n
+HIST,History,402,3,Problems in International Relations,n
+HIST,History,405,3,"Diplomacy and Conflict in the Middle East, 1914 to the Present",n
+HIST,History,408,3,"American Foreign Policy, 1870-1945",n
+HIST,History,409,3,"American Foreign Policy, 1945 to Present",n
+HIST,History,418,3,The 1960s in Global Perspective,n
+HIST,History,425,6,War and Society,n
+HIST,History,432,6,International Relations of the Great Powers in the Twentieth Century,n
+HIST,History,441,3,History of the Holocaust,n
+HIST,History,460,3,Revolution and Resistance in the Third World,n
+HIST,History,484,3,East Asian Military Systems and Warfare China,n
+POLI,Political Science,329,3,Gender and Politics,n
+POLI,Political Science,334,3,Comparative Democratization,n
+POLI,Political Science,351,3,Environmental Politics and Policy,n
+POLI,Political Science,360,(3/6),Security Studies,n
+POLI,Political Science,361,(3/6),International Violence and Its Control,n
+POLI,Political Science,362,3,The Great Powers and International Politics,n
+POLI,Political Science,363,(3/6),Canadian Foreign Policy,n
+POLI,Political Science,364,(3/6),International Organization,n
+POLI,Political Science,367,(3/6),International Relations Theory and the International System,n
+POLI,Political Science,369,(3/6),Issues in International Security,n
+POLI,Political Science,370,(3/6),Issues in International Conflict Management,n
+POLI,Political Science,373,3,Ethics in World Politics,n
+POLI,Political Science,374,3,International Peace Keeping,n
+POLI,Political Science,376,3,International Law,n
+POLI,Political Science,460,(3/6),Foreign Policy Analysis,y
+POLI,Political Science,461,3,Peace and Conflict Studies,y
+POLI,Political Science,462,3,International Relations Theory,y
+POLI,Political Science,466,3,The Politics of International Law,n
+SOCI,Sociology,420,(3/6),Sociology of the Environment,y
+SOCI,Sociology,430,3,Global Citizenship,y
+SOCI,Sociology,461,(3/6),Political Sociology,y
+SOCI,Sociology,470,(3/6),Sociology of Crime and Justice,y
+ANTH,Anthropology,330,3,Anthropology of Rural Peoples and the Global Economy,y
+ANTH,Anthropology,360,3,Introduction to Ecological Anthropology,y
+ECON,Economics,312,3,Political Economy of Capitalism,y
+ECON,Economics,313,3,Marxist Economics,y
+ECON,Economics,317,3,Poverty and Inequality,y
+ECON,Economics,318,3,History and Philosophy of Economics from Aristotle to Adam Smith,y
+ECON,Economics,319,6,History of Economic Thought,y
+ECON,Economics,334,6,Economic History of Modern Europe,y
+ECON,Economics,335,3,"Fertility, Families and Human Migration",y
+ECON,Economics,339,3,Economics of Technological Change,y
+ECON,Economics,341,3,Economic Development of Asia,y
+ECON,Economics,342,3,The Economy of China Since 1949,y
+ECON,Economics,343,3,The Economic Development of Modern Japan,y
+ECON,Economics,351,3,Women in the Economy,y
+ECON,Economics,355,3,Introduction to International Trade,y
+ECON,Economics,356,3,Introduction to International Finance,y
+ECON,Economics,371,3,Economics of the Environment,y
+ECON,Economics,374,3,Land Economics,y
+ECON,Economics,387,3,Economic Reform and Transition,y
+ECON,Economics,444,3,The Contemporary Japanese Economy,y
+ECON,Economics,455,3,International Trade,y
+ECON,Economics,456,3,International Macroeconomics and Finance,y
+ECON,Economics,471,3,Economics of Nonrenewable Resources,y
+ECON,Economics,472,3,Economics of Renewable Resources,y
+ECON,Economics,487,3,Comparative Economic Systems,y
+ECON,Economics*,441,3,The Process of Economic Development�,y
+ECON,Economics*,442,3,Issues in Economic Development,y
+FRE,Food and Resource Economics,306,3,Introduction to Global Food Markets,y
+FRE,Food and Resource Economics,340,3,International Agricultural Development,y
+FRE,Food and Resource Economics,420,3,Trade and Domestic Policy Protection in Global Food Markets,y
+FNH,"Food, Nutrition and Health",355,3,World Problems in Nutrition (formerly HUNU 303),n
+FNH,"Food, Nutrition and Health",455,3,Applied International Nutrition,y
+FRST,Forestry,439,3,International Forestry,n
+GRSJ,"Gender, Race, Sexuality and Social Justice",306,3,"Globalization and Social Justice: Gender, Race, and Sexuality in International Politics",n
+GEOG,Geography,310,3,Environment and and Sustainability,y
+GEOG,Geography,311,3,Urban Environments,n
+GEOG,Geography,312,3,Climate Change: Science and Society,y
+GEOG,Geography,321,3,"Historical Geography of Urbanization: Cities, Space, and Power",n
+GEOG,Geography,352,3,Introduction to Third World Urbanization,n
+GEOG,Geography,353,3,Geographies of Migration and Settlement,n
+GEOG,Geography,361,3,Introduction to Economic Geography,y
+GEOG,Geography,362,3,Geography of Economic Development,y
+GEOG,Geography,364,3,"Globalization, Cities, and Regions",y
+GEOG,Geography,410,3,Environment and Society,y
+GEOG,Geography,423,3,Development of Environmental Thought,y
+GEOG,Geography,457,3,Social and Behavioural Geography,y
+GEOG,Geography,468,3,Geography of Intl Economic Systems: Canada and the Pacific Basin,n
+GEOG,Geography,496,3,Geography of Africa,y
+HIST,History,423,3,Economic and Business History of Modern Japan,n
+IHHS,Interprofessional Health and Human Service,300,3,Working in International Health,n
+PHIL,Philosophy,335,(3/4),Power and Oppression,n
+PHIL,Philosophy,435,(3/4),Environmental Ethics,n
+POLI,Political Science,329,3,Gender and Politics,n
+POLI,Political Science,364,(3/6),International Organization,n
+POLI,Political Science,366,3,International Political Economy,n
+POLI,Political Science,375,3,Global Environmental Politics,n
+POLI,Political Science,463,3,International Interdependence,y
+SOCI,Sociology,301,(3/6),Sociology of Development and Underdevelopment,y
+SOCI,Sociology,360,(3/6),Sociology and Natural Resources,y
+SOCI,Sociology,361,(3/6),Social Inequality,

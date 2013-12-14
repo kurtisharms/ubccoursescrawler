@@ -1,0 +1,1500 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7 oldie" lang="en"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="ie7 oldie" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="ie8 oldie" lang="en"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]><html class="ie9" lang="en"><![endif]-->
+<!--[[if (gt IE 9)|(gt IEMobile 7)]><!--><html lang="en"><!--<![endif]-->
+<!--
+ * UBC CLF (Common Look and Feel) v7.0.2
+ * Copyright 2012 The University of British Columbia
+ * UBC Communications and Marketing
+ * http://brand.ubc.ca/clf
+ */
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>UBC Student Services - Courses</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Stylesheets -->
+<link href="/static/ubcclf/7.0.2/css/ubc-clf-full.min.css" rel="stylesheet">
+<link href="/static/courseschedule/stylesheets/unit.css" rel="stylesheet">
+<link href="/static/courseschedule/stylesheets/unit-responsive.css" rel="stylesheet">
+<link href="/static/courseschedule/stylesheets/unit-print.css" rel="stylesheet">
+<!--[if lte IE 7]>
+<link href="/static/ubcclf/7.0.2/css/font-awesome-ie7.css" rel="stylesheet">
+<![endif]-->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="/static/ubcclf/7.0.2/js/html5.js"></script>
+<![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="/static/ubcclf/7.0.2/img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/ubcclf/7.0.2/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/ubcclf/7.0.2/img/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/ubcclf/7.0.2/img/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/static/ubcclf/7.0.2/img/apple-touch-icon-57-precomposed.png">
+<script src="/static/shared/scripts/jquery-1.8.1.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript" src="/static/courseschedule/scripts/ttpopup.js"></script>
+
+<div id="ttpopup" onmouseover="overdiv=1;"  onmouseout="overdiv=0; setTimeout('hideLayer()',1000)">
+pop up description layer
+</div>
+    <div class="container">
+        <!-- UBC Global Utility Menu -->
+        <div class="collapse expand" id="ubc7-global-menu">
+            <div id="ubc7-search" class="expand">
+                <div id="ubc7-search-box">
+                    <form class="form-search" method="get" action="http://www.ubc.ca/search/refine/" role="search">
+                        <input type="search" name="q" placeholder="Search Course Schedule" class="input-xlarge search-query">
+                        <input type="hidden" name="label" value="Search Course Schedule" />
+                        <input type="hidden" name="site" value="courses.students.ubc.ca" />
+                        <button type="submit" class="btn">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div id="ubc7-global-header" class="expand">
+                <!-- Global Utility Header from CDN -->
+            </div>
+        </div>
+        <!-- End of UBC Global Utility Menu -->
+        <!-- UBC Header -->
+        <header id="ubc7-header" class="row-fluid expand" role="banner">
+            <div class="span1">
+                <div id="ubc7-logo">
+                    <a href="http://www.ubc.ca" title="The University of British Columbia (UBC)">The University of British Columbia</a>
+                </div>
+            </div>
+            <div class="span2">
+                <div id="ubc7-apom">
+                    <a href="https://cdn.ubc.ca/clf/ref/aplaceofmind" title="UBC a place of mind">UBC - A Place of Mind</a>                        
+                </div>
+            </div>
+            <div class="span9" id="ubc7-wordmark-block">
+                <div id="ubc7-wordmark">
+                    
+                    
+                      <a href="http://www.ubc.ca" title="The University of British Columbia (UBC)">The University of British Columbia
+                        <span class="ubc7-campus" id="ubc7-vancouver-campus">Vancouver campus </span>
+                      </a>
+                    
+                    
+                </div>
+                <div id="ubc7-global-utility">
+                    <button type="button" data-toggle="collapse" data-target="#ubc7-global-menu"><span>UBC Search</span></button>
+                    <noscript><a id="ubc7-global-utility-no-script" href="http://www.ubc.ca/" title="UBC Search">UBC Search</a></noscript>
+                </div>
+            </div>
+        </header>
+        <!-- End of UBC Header -->
+        <!-- UBC Unit Identifier -->
+        <div id="ubc7-unit" class="row-fluid expand">
+            <div class="span12">
+                <!-- Mobile Menu Icon -->
+                <div class="navbar">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target="#ubc7-unit-navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div>
+                <!-- Read more about Course Schedule Treatment on http://brand.ubc.ca/clf -->
+                <!-- No Faculty Treatment --><!--<div id="ubc7-unit-name" class="ubc7-single-element"> -->
+                <div id="ubc7-unit-name">
+                 
+                  
+                
+                   <a href="/cs/main?pname=welcome&tname=welcome" title="Course Schedule"><span id="ubc7-unit-faculty">Student Service Centre</span><span id="ubc7-unit-identifier">Course Schedule</span></a>
+               
+                        
+                </div>
+            </div>
+        </div>
+        <!-- End of UBC Unit Identifier -->
+        
+             
+        <!-- UBC Unit Navigation --> <div id='ubc7-unit-menu' class='navbar expand' role='navigation'> <div class='navbar-inner expand'><div class='container'><div class='nav-collapse collapse' id='ubc7-unit-navigation'><ul class='nav'> <li class='dropdown Browse'>  <div class='btn-group'>  <a class='btn' data-toggle='dropdown' >Browse  <div class='ubc7-arrow down-arrow'></div></a>  <ul class='dropdown-menu'> <li class='Standard_Timetables' ><a href='/cs/main?pname=stt&tname=stt' title='Standard Timetables'>Standard Timetables</a></li> <li class='Browse_Courses' ><a href='/cs/main?pname=subjarea&tname=subjareas&req=0' title='Courses'>Courses</a></li> <li class='Browse_Specializations' ><a href='/cs/main?pname=spec&tname=spec' title='Specializations'>Specializations</a></li>  </ul>  </div>  </li>  <li class='dropdown Search'>  <div class='btn-group'>  <a class='btn' data-toggle='dropdown' >Search  <div class='ubc7-arrow down-arrow'></div></a>  <ul class='dropdown-menu'> <li class='active Search_Courses' ><a href='/cs/main?pname=subjarea&tname=sectsearch' title='Courses'>Courses</a></li> <li class='Search_Instructor' ><a href='/cs/main?pname=instsearch&tname=instsearch' title='Instructor'>Instructor</a></li>  </ul>  </div>  </li>  <li class='dropdown Help'>  <div class='btn-group'>  <a class='btn'  data-toggle='dropdown'>Help  <div class='ubc7-arrow down-arrow'></div></a>  <ul class='dropdown-menu'>  <li class='Quick_Help'><a href='/static/courseschedule/cs_quick_help.htm' title='Quick Help' target='_blank'>Quick Help</a></li>  <li class='Glossary'><a href='/static/courseschedule/cs_glossary.htm' title='Glossary' target='_blank'>Glossary</a></li>  <li class='Planning_UBCV'><a href='http://www.calendar.ubc.ca/vancouver/planning.cfm' title='Course Planning - Vancouver' target='_blank'>Course Planning - Vancouver</a></li>  <li class='Planning_UBCO'><a href='http://www.calendar.ubc.ca/okanagan/index.cfm?tree=18,0,0,0' title='Course Planning - Okanagan' target='_blank'>Course Planning - Okanagan</a></li>  </ul>  </div>  </li> </ul> <div id='cwl' class='pull-right'><form METHOD='GET' ACTION='https://www.auth.cwl.ubc.ca/auth/login'> <input type='HIDDEN' name='serviceName' value='es_coursesched_psa'> <input type='HIDDEN' name='serviceURL' value='/cs/main'> <input type='HIDDEN' name='requestType' value='login'> <input type=IMAGE name='IMGSUBMIT' value='IMGSUBMIT' src='https://www.auth.cwl.ubc.ca/CWL_login_button.gif' WIDTH='76' HEIGHT='25' ALT='CWL Login' BORDER='0' /> </form> </div></div><!-- /.nav-collapse -->  </div>  </div><!-- /navbar-inner -->  </div><!-- /navbar -->  <!-- End of UBC Unit Navigation --> 
+        
+          
+        
+             
+            <!-- UBC Unit Breadcrumbs --> <ul class='breadcrumb expand'> <li><a href=/cs/main?pname=welcome&tname=welcome title='Course Schedule'>Course Schedule</a> <span class='divider'>/</span> </li> <li class='active' >Search for Courses</li> <div class='pull-right'> <div class='btn-group'><button class='btn btn-primary' data-toggle='dropdown'>Campus: UBC Vancouver</button>  <button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'><i class='icon-chevron-down'></i></button> <ul class='dropdown-menu'> <li class='active' ><a href='/cs/main?campuscd=UBC' title='UBC'>UBC Vancouver</a></li> <li><a href='/cs/main?campuscd=UBCO' title='UBCO'>UBC Okanagan</a></li> </ul></div><div class='btn-group'><button class='btn btn-primary' data-toggle='dropdown'>Session: 2013 Winter</button>  <button class='btn btn-primary dropdown-toggle' data-toggle='dropdown'><i class='icon-chevron-down'></i></button> <ul class='dropdown-menu'> <li class='active' ><a href='/cs/main?sessyr=2013&sesscd=W' title='2013 Winter'>2013 Winter</a></li> <li><a href='/cs/main?sessyr=2013&sesscd=S' title='2013 Summer'>2013 Summer</a></li> </ul></div></div> </ul> <!-- End of UBC Unit Breadcrumbs -->
+          
+        
+              
+        
+        <!-- Content Area -->
+        <div class="content expand" role="main">
+        <br/>
+          <!-- Main Content-->
+          
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Course Search:</strong> This is where you can search for courses based on a number of criteria
+including day and time offered, subject area and keywords in the course
+description. The results will display at the bottom of the page.
+</p>
+<form method="POST" action="/cs/main#search_results" onsubmit="return validate('SECT_SEARCH_TIMES');" name="sect_srch_criteria_simp_search" class="form-horizontal">
+<script LANGUAGE="JavaScript">
+  function clickDistanceEducation() {
+    document.sect_srch_criteria_simp_search.actv.options[0].selected = true;
+    if (document.sect_srch_criteria_simp_search.DISTANCE_EDUCATION.checked) {
+      document.sect_srch_criteria_simp_search.actv.disabled = true;
+    } else {
+      document.sect_srch_criteria_simp_search.actv.disabled = false;
+    }
+  }
+</script>
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span9">
+
+			<fieldset>
+				<legend>Search Criteria</legend>
+				<div class="control-group">
+				    <label class="control-label" for=subj>
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_subject" target="students" onmouseover="displayHelpText('This will search through the subject codes of all UBC courses.',235,160,event,'Subject Area')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Subject Area:</label>
+				    <div class="controls">
+				      <input type="text" size="6" id=subj name=subj  value="HIST"  placeholder="eg. ENGL or EN*" />
+				      <span class="help-inline">(eg. ENGL or EN*)</span>
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label" for=crsno>
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_courseno" target="students" onmouseover="displayHelpText('This will allow you to specify a full or partial course number to search for.',235,160,event,'Course Number')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Course Number:</label>
+				    <div class="controls">
+				      <input type="text" size="6" id=crsno name=crsno  value="102"  placeholder="eg. 110 or 1*" />
+				      <span class="help-inline">(eg. 110 or 1*)</span>
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label" for=SECTION_SEARCH_KEYWORD >
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_keyword" target="students" onmouseover="displayHelpText('This will search the title and description of all UBC courses.',235,160,event,'Keyword(s)')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Keyword(s):</label>
+				    <div class="controls">
+				      <input type="text" size="15" id=SECTION_SEARCH_KEYWORD  name=SECTION_SEARCH_KEYWORD value="" />
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label" for=actv >
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_activity" target="students" onmouseover="displayHelpText('This will allow you to select the type of course to search for. (e.g. Lecture, Tutorial, etc.)',235,160,event,'Activity Type')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Activity Type:</label>
+				    <div class="controls">
+							<SELECT name=actv id=actv >
+							
+							 <OPTION selected value="--Any--">--Any--</OPTION>
+							
+							 <OPTION  value="Lecture                                           ">Lecture                                           </OPTION>
+							
+							 <OPTION  value="Laboratory                                        ">Laboratory                                        </OPTION>
+							
+							 <OPTION  value="Seminar                                           ">Seminar                                           </OPTION>
+							
+							 <OPTION  value="Tutorial                                          ">Tutorial                                          </OPTION>
+							
+							 <OPTION  value="Waiting List                                      ">Waiting List                                      </OPTION>
+							
+							 <OPTION  value="Discussion                                        ">Discussion                                        </OPTION>
+							
+							 <OPTION  value="Directed Studies                                  ">Directed Studies                                  </OPTION>
+							
+							 <OPTION  value="Thesis                                            ">Thesis                                            </OPTION>
+							
+							 <OPTION  value="Work Placement                                    ">Work Placement                                    </OPTION>
+							
+							 <OPTION  value="Practicum                                         ">Practicum                                         </OPTION>
+							
+							 <OPTION  value="Lecture-Laboratory                                ">Lecture-Laboratory                                </OPTION>
+							
+							 <OPTION  value="Studio                                            ">Studio                                            </OPTION>
+							
+							 <OPTION  value="Web-Oriented Course                               ">Web-Oriented Course                               </OPTION>
+							
+							 <OPTION  value="Exchange Program                                  ">Exchange Program                                  </OPTION>
+							
+							 <OPTION  value="Rehearsal                                         ">Rehearsal                                         </OPTION>
+							
+							 <OPTION  value="Essay/Report                                      ">Essay/Report                                      </OPTION>
+							
+							 <OPTION  value="Workshop                                          ">Workshop                                          </OPTION>
+							
+							 <OPTION  value="Project                                           ">Project                                           </OPTION>
+							
+							 <OPTION  value="Problem Session                                   ">Problem Session                                   </OPTION>
+							
+							 <OPTION  value="Lab-Seminar                                       ">Lab-Seminar                                       </OPTION>
+							
+							 <OPTION  value="Optional Section                                  ">Optional Section                                  </OPTION>
+							
+							 <OPTION  value="Lecture-Seminar                                   ">Lecture-Seminar                                   </OPTION>
+							
+							 <OPTION  value="Lecture-Discussion                                ">Lecture-Discussion                                </OPTION>
+							
+							 <OPTION  value="Research                                          ">Research                                          </OPTION>
+							
+							 <OPTION  value="Reserved Section                                  ">Reserved Section                                  </OPTION>
+							
+							 <OPTION  value="Field Trip                                        ">Field Trip                                        </OPTION>
+							
+							</SELECT>
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label" for=credit >
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_credit" target="students" onmouseover="displayHelpText('This will allow you to specify a number of course credits to search for.',235,160,event,'Credits')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Credits:</label>
+				    <div class="controls">
+				      <input type="text" size="4" maxlength="4" id=credit  name=credit value="" />
+				    </div>
+				</div>
+				<div class="control-group">
+				    <label class="control-label" for=term >
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_term" target="students" onmouseover="displayHelpText('This will allow you to search for a course within a specific term of a session.',235,160,event,'Term')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Term:</label>
+				    <div class="controls">
+				      <SELECT name=term id=term >
+							
+				        <OPTION selected value="--Any--">--Any--</OPTION>
+							
+				        <OPTION  value="Term 1">Term 1</OPTION>
+							
+				        <OPTION  value="Term 2">Term 2</OPTION>
+							
+				        <OPTION  value="Term 1-2">Term 1-2</OPTION>
+							
+				      </SELECT>
+				    </div>
+				</div>
+				
+				
+				  
+				
+				
+				
+				<div class="control-group">
+				    <label class="control-label" for=seat >
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_status" target="students" onmouseover="displayHelpText('The status of a course refers to whether the course has seats available or whether it is full. You can use the status box to filter down your search in the section search area by selecting *has seats available* in the drop down.',235,160,event,'Status')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Status:</label>
+				    <div class="controls">
+				      <SELECT name=seat id=seat >
+				      
+				        <OPTION selected value="--Any--">--Any--</OPTION>
+							
+				        <OPTION  value="Has seats available">Has seats available</OPTION>
+							
+				      </SELECT>
+				    </div>
+				</div>
+				
+				<div class="control-group">
+				    <label class="control-label" for=sTime>
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_time" target="students" onmouseover="displayHelpText('This allows you to search for courses that meets between two specific times of the day.',235,160,event,'Available Times')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Available Times:</label>
+				    <div class="controls">
+				      <input type="text" class="input-small" name="sTime" value="" /> 
+				      - 
+				      <input type="text" class="input-small" name="eTime" value="" /> 
+				      <span class="help-inline">(24 Hr format)</span>
+				    </div>
+				</div>
+				<div class="control-group">
+				  <label class="control-label">
+				  <a href="/static/courseschedule/cs_glossary.htm#crs_srch_day" target="students" onmouseover="displayHelpText('This allows you to search for courses that meet on specific days of the week.',235,160,event,'Available Days')" onmouseout="closePopup();">
+				  <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				  Available Days:</label>
+				  
+				  <div class="controls">
+						<label class="checkbox inline">
+						  <input type=CHECKBOX value="True" name="DAY1" /> Su
+						</label>
+						<label class="checkbox inline">
+					    <input type=CHECKBOX value="True" name="DAY2" /> M
+					  </label>
+					  <label class="checkbox inline">
+					    <input type=CHECKBOX value="True" name="DAY3" /> T
+					  </label>
+					  <label class="checkbox inline">
+					    <input type=CHECKBOX value="True" name="DAY4" /> W
+					  </label>
+					  <label class="checkbox inline">
+					    <input type=CHECKBOX value="True" name="DAY5" /> Th
+					  </label>
+					  <label class="checkbox inline">
+					    <input type=CHECKBOX value="True" name="DAY6" /> F
+					  </label>
+					  <label class="checkbox inline">
+					    <input type=CHECKBOX value="True" name="DAY7" /> Sa
+					  </label>
+				  </div>
+				</div>
+				<div class="control-group">
+				    <label class="" for=MUST_MATCH >
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_exactdays" target="students" onmouseover="displayHelpText('This forces the search to return only those sections which exactly match those days (ie: a Mon,Wed section will NOT match Mon,Wed,Fri).',235,160,event,'Exact match')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Check here if Available days must match precisely
+				    <input type=CHECKBOX value="True" name="MUST_MATCH"  id="MUST_MATCH"  />
+				    </label>
+				</div>
+				
+				<div class="control-group">
+				    <label class="" for=CDF >
+				    <a href="http://www.students.ubc.ca/coursesreg/registering-for-courses/credit-d-fail" target="students" onmouseover="displayHelpText('This allows you to search only for courses that are eligible for Credit/D/Fail grading.',235,160,event,'Credit/D/Fail')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Return courses eligible for <a href="http://www.students.ubc.ca/coursesreg/registering-for-courses/credit-d-fail" target="_blank">Credit/D/Fail</a> only
+				    <input type=CHECKBOX value="Y" name="CDF" id="CDF"  />
+				    </label>
+				</div>
+				 
+				<div class="control-group">
+				    <label class="" for=DISTANCE_EDUCATION >
+				    <a href="/static/courseschedule/cs_glossary.htm#crs_srch_det" target="students" onmouseover="displayHelpText('This allows you to search for distance education courses only.',235,160,event,'Distance Education')" onmouseout="closePopup();">
+				    <i class="icon-question-sign" ></i></a>&nbsp;&nbsp;
+				    Return Distance Education courses only
+				    <input type=CHECKBOX value="True" name="DISTANCE_EDUCATION" id="DISTANCE_EDUCATION" onclick="clickDistanceEducation()"  />
+				    </label>
+				</div>
+				
+			</fieldset>
+			
+		</div>
+		<div class="span3">
+			<fieldset>
+				<legend>Results per Page</legend>
+				<label class="radio">
+				  <input NAME="scrsz" checked type="radio" value="20" />
+				  20 Items
+				</label>
+				<label class="radio">
+				  <input NAME="scrsz"  type="radio" value="50">
+				  50 Items
+				</label>
+				<label class="radio">
+				  <input NAME="scrsz"  type="radio" value="100">
+				  100 Items
+				</label>
+			
+			</fieldset>
+  </div>
+</div>
+<div class="control-group">
+    <div class="controls">
+      <input name="submit" type=submit class="btn btn-primary"  value="Search for Sections" />
+    </div>
+</div>
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+<A NAME="search_results"></A>
+<b>Search Results:</b>&nbsp;&nbsp;(Sections 1-17 of 17)
+
+<br><br>
+
+
+
+<hr size=1><br>
+
+
+<a href="/cs/main?pname=subjarea&tname=sectsearch&fmat=dtl" class="btn btn-primary btn-small pull-right">More Details</a>
+
+
+
+<center></center>
+
+
+
+<table class="table table-bordered mobile-content" ></table>
+<table class="table table-striped section-summary">
+<thead>
+  <tr>
+    <th>Status</th>
+    <th>Section</th>
+    <th>Activity</th>
+    <th>Term</th>
+	  <th>Interval</th>
+    <th>Days</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Section Comments</th>
+  </tr>
+</thead>
+<tbody>
+
+<tr class=section1><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=001"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-14-0','t2-14-0','t1-15-0','t2-15-0','t1-14-2','t2-14-2','t1-15-2','t2-15-2'),'00842');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 001
+      </a>  
+                </td>
+            
+            <td>Lecture</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Mon Wed</td>
+            <td>14:00</td>
+            <td>15:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1A"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-5-3','t2-5-3','t1-6-3','t2-6-3','t1-7-3','t2-7-3'),'16519');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1A
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Thu</td>
+            <td>9:30</td>
+            <td>11:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>Full</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1B"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-6-4','t1-7-4','t2-6-4','t2-7-4'),'16521');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1B
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+
+            
+            <tr class='section'><td></td>
+            
+                <td></td>
+            
+            <td>Discussion</td>
+            <td>2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1C"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-12-4','t1-13-4','t2-12-4','t2-13-4'),'00893');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1C
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>13:00</td>
+            <td>14:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+
+            
+            <tr class='section'><td></td>
+            
+                <td></td>
+            
+            <td>Discussion</td>
+            <td>2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>13:00</td>
+            <td>14:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1D"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-12-4','t2-12-4','t1-13-4','t2-13-4'),'00900');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1D
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>13:00</td>
+            <td>14:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>Full</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1E"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-14-4','t2-14-4','t1-15-4','t2-15-4'),'01181');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1E
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>14:00</td>
+            <td>15:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>Full</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1F"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-14-4','t2-14-4','t1-15-4','t2-15-4'),'01183');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1F
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>14:00</td>
+            <td>15:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1G"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-18-4','t2-18-4','t1-19-4','t2-19-4'),'01194');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1G
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>16:00</td>
+            <td>17:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1H"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-16-4','t2-16-4','t1-17-4','t2-17-4'),'16522');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1H
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>15:00</td>
+            <td>16:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>Full</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1J"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-14-4','t2-14-4','t1-15-4','t2-15-4'),'01768');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1J
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>14:00</td>
+            <td>15:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1K"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-10-4','t1-11-4','t2-10-4','t2-11-4'),'11948');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1K
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>12:00</td>
+            <td>13:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+
+            
+            <tr class='section'><td></td>
+            
+                <td></td>
+            
+            <td>Discussion</td>
+            <td>2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>12:00</td>
+            <td>13:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1L"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-8-3','t2-8-3','t1-9-3','t2-9-3','t1-10-3','t2-10-3'),'12774');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1L
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Thu</td>
+            <td>11:00</td>
+            <td>12:30</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1M"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-8-3','t2-8-3','t1-9-3','t2-9-3','t1-10-3','t2-10-3'),'01772');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1M
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Thu</td>
+            <td>11:00</td>
+            <td>12:30</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1N"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-16-4','t1-17-4','t2-16-4','t2-17-4'),'14059');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1N
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>15:00</td>
+            <td>16:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+
+            
+            <tr class='section'><td></td>
+            
+                <td></td>
+            
+            <td>Discussion</td>
+            <td>2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>15:00</td>
+            <td>16:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1P"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-8-4','t1-9-4','t2-8-4','t2-9-4'),'01782');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1P
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>11:00</td>
+            <td>12:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+
+            
+            <tr class='section'><td></td>
+            
+                <td></td>
+            
+            <td>Discussion</td>
+            <td>2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>11:00</td>
+            <td>12:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section2><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1Q"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-4-4','t2-4-4','t1-5-4','t2-5-4'),'17625');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1Q
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1-2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>9:00</td>
+            <td>10:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr><tr class=section1><td>&nbsp;</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+            
+            
+                <td>
+
+                  <a href="/cs/main?pname=subjarea&tname=subjareas&req=5&dept=HIST&course=102&section=L1R"
+                
+                    onmouseover="cancelHide=1; popup(); setColor(new Array('t1-6-4','t1-7-4','t2-6-4','t2-7-4'),'17626');" onmouseout="cancelHide=0;setTimeout('hideLayer()',2000)"
+                
+                 >
+
+                    HIST 102 L1R
+      </a>  
+                </td>
+            
+            <td>Discussion</td>
+            <td>1</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+
+            
+            <tr class='section'><td></td>
+            
+                <td></td>
+            
+            <td>Discussion</td>
+            <td>2</td>
+             <td>
+					  
+					  </td>
+            <td> Fri</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td class="section-comments"></td>
+            
+
+       
+  
+
+
+</tr>
+
+
+</tbody>
+</table>
+
+
+<center></center>
+
+ 
+
+          <!-- end of Main Content -->
+         
+        &nbsp;
+        </div>
+        <!-- End of Content Area -->
+       
+       
+       
+       <!-- Footer Area Unit Menu - Mobile Only --><div id='ubc7-unit-alternate-navigation' class='navbar expand visible-phone' role='navigation'> <div class='navbar-inner expand'><div class='container'><div class='nav-collapse collapse'><ul class='nav'> <li class='dropdown Browse'>  <div class='btn-group'>  <a class='btn' data-toggle='dropdown' >Browse  <div class='ubc7-arrow down-arrow'></div></a>  <ul class='dropdown-menu'> <li class='Standard_Timetables' ><a href='/cs/main?pname=stt&tname=stt' title='Standard Timetables'>Standard Timetables</a></li> <li class='Browse_Courses' ><a href='/cs/main?pname=subjarea&tname=subjareas&req=0' title='Courses'>Courses</a></li> <li class='Browse_Specializations' ><a href='/cs/main?pname=spec&tname=spec' title='Specializations'>Specializations</a></li>  </ul>  </div>  </li>  <li class='dropdown Search'>  <div class='btn-group'>  <a class='btn' data-toggle='dropdown' >Search  <div class='ubc7-arrow down-arrow'></div></a>  <ul class='dropdown-menu'> <li class='active Search_Courses' ><a href='/cs/main?pname=subjarea&tname=sectsearch' title='Courses'>Courses</a></li> <li class='Search_Instructor' ><a href='/cs/main?pname=instsearch&tname=instsearch' title='Instructor'>Instructor</a></li>  </ul>  </div>  </li>  <li class='dropdown Help'>  <div class='btn-group'>  <a class='btn'  data-toggle='dropdown'>Help  <div class='ubc7-arrow down-arrow'></div></a>  <ul class='dropdown-menu'>  <li class='Quick_Help'><a href='/static/courseschedule/cs_quick_help.htm' title='Quick Help' target='_blank'>Quick Help</a></li>  <li class='Glossary'><a href='/static/courseschedule/cs_glossary.htm' title='Glossary' target='_blank'>Glossary</a></li>  <li class='Planning_UBCV'><a href='http://www.calendar.ubc.ca/vancouver/planning.cfm' title='Course Planning - Vancouver' target='_blank'>Course Planning - Vancouver</a></li>  <li class='Planning_UBCO'><a href='http://www.calendar.ubc.ca/okanagan/index.cfm?tree=18,0,0,0' title='Course Planning - Okanagan' target='_blank'>Course Planning - Okanagan</a></li>  </ul>  </div>  </li> </ul> <div id='cwl' class='pull-right'><form METHOD='GET' ACTION='https://www.auth.cwl.ubc.ca/auth/login'> <input type='HIDDEN' name='serviceName' value='es_coursesched_psa'> <input type='HIDDEN' name='serviceURL' value='/cs/main'> <input type='HIDDEN' name='requestType' value='login'> <input type=IMAGE name='IMGSUBMIT' value='IMGSUBMIT' src='https://www.auth.cwl.ubc.ca/CWL_login_button.gif' WIDTH='76' HEIGHT='25' ALT='CWL Login' BORDER='0' /> </form> </div></div><!-- /.nav-collapse -->  </div>  </div><!-- /navbar-inner -->  </div><!-- /navbar -->  <!-- End of Footer Area Unit Menu --> 
+        
+          
+             
+         <div id="dwindow" style="position: fixed; background-color: rgb(235, 235, 235); display: none;border-width:medium;border-style:solid; z-index:99;">
+            <div><p id="dwindowTitle" class='formHeader' align='left' style='margin-top:0;margin-bottom:0'><b>Comments</b></p></div>
+            <div>
+            <table><tr><td id="helpContent">&nbsp;</td></tr></table>
+            </div>
+          </div>  
+            
+          <div class="fullscreen" id="processingOverlay" style="display:none">
+						<div class="centerbox" id="processingText">
+						<div style="text-align: center;"><b>Please wait while your request is processed - this may take up to a minute to complete.</b></div>
+						<table align="center"><tr><td>
+						<div style="font-size:6pt;padding:2px;border:solid black 1px">
+						<span id="box1">&nbsp; &nbsp;</span>
+						<span id="box2">&nbsp; &nbsp;</span>
+						<span id="box3">&nbsp; &nbsp;</span>
+						<span id="box4">&nbsp; &nbsp;</span>
+						<span id="box5">&nbsp; &nbsp;</span>
+						<span id="box6">&nbsp; &nbsp;</span>
+						<span id="box7">&nbsp; &nbsp;</span>
+						<span id="box8">&nbsp; &nbsp;</span>
+						<span id="box9">&nbsp; &nbsp;</span>
+						<span id="box10">&nbsp; &nbsp;</span>
+						<span id="box11">&nbsp; &nbsp;</span>
+						</div>
+						</td></tr>
+						</table>
+						
+						</div>
+					</div>
+                          
+        <footer id="ubc7-footer" class="expand" role="contentinfo">
+            <div class="row-fluid expand" id="ubc7-unit-footer">
+                <div class="span10" id="ubc7-unit-address">
+                    
+                    
+                    <div id="ubc7-address-location">
+                        <span id="ubc7-address-city">Vancouver | Kelowna</span>, <span id="ubc7-address-province" title="British Columbia">BC</span> <span id="ubc7-address-country">Canada</span> 
+                    </div>
+                    
+                      <div id="ubc7-address"><a href="https://www.askme.ubc.ca/" target="_blank">Contact Us</a></div>
+                    
+                    
+                </div>
+                <div class="span2">
+                    <strong>Find us on</strong>
+                    <div id="ubc7-unit-social-icons">
+                        <a href="http://www.ubc.ca/" title="Facebook icon"><i class="icon-facebook-sign"></i></a>&nbsp;
+                        <a href="http://www.ubc.ca/" title="Twitter icon"><i class="icon-twitter-sign"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid expand ubc7-back-to-top">
+                <div class="span2">
+                    <a href="#" title="Back to top">Back to top <div class="ubc7-arrow up-arrow grey"></div></a>
+                </div>
+            </div>
+            <div class="row-fluid expand" id="ubc7-global-footer">
+                <div class="span5" id="ubc7-signature"><a href="http://www.ubc.ca/" title="The University of British Columbia (UBC)">The University of British Columbia</a></div>
+                <div class="span7" id="ubc7-footer-menu">
+                </div>
+            </div>
+            <div class="row-fluid expand" id="ubc7-minimal-footer">
+                <div class="span12">
+                    <ul>
+                        <li><a href="https://cdn.ubc.ca/clf/ref/emergency" title="Emergency Procedures">Emergency Procedures</a> <span class="divider">|</span></li>
+                        <li><a href="https://cdn.ubc.ca/clf/ref/terms" title="Terms of Use">Terms of Use</a> <span class="divider">|</span></li>
+                        <li><a href="https://cdn.ubc.ca/clf/ref/copyright" title="UBC Copyright">Copyright</a> <span class="divider">|</span></li>
+                        <li><a href="https://cdn.ubc.ca/clf/ref/accessibility" title="Accessibility">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div> <!-- /container -->
+    <!-- Placed javascript at the end for faster loading -->
+    <script src="/static/ubcclf/7.0.2/js/ubc-clf.min.js"></script>
+    
+    <script language="JavaScript" src="/static/shared/scripts/tablesorter.js"></script>
+    <script language="JavaScript" src="/static/shared/scripts/tablefilter.js"></script>
+    <script language="JavaScript" src="/static/courseschedule/scripts/simplePopup.js"></script> 
+    <script language="JavaScript" src="/static/courseschedule/scripts/dhtml_pos.js"></script>
+    <script type="text/javascript" src="/static/courseschedule/scripts/unit.js"></script>
+    <script type="text/javascript" src="/static/courseschedule/scripts/validate.js"></script>
+    <script type="text/javascript" src="/static/courseschedule/scripts/columnsToRows.js"></script>
+    <script type="text/javascript">
+      <!-- // Automatic redirection based on form selection
+      function redirect_header() {
+        goTo = document.form_header.select_links.options[document.form_header.select_links.selectedIndex].value;
+        if (goTo != "") {
+          location = goTo;
+        }
+      }
+      // -->
+    </script>
+    <script type="text/javascript" src="/static/shared/scripts/coursesanalytics.js"></script>
+		<script type="text/javascript">
+			var progressEnd = 11;           // set to number of progress <span>'s.
+			var progressColor = '#002145';  // set to progress bar color
+			var progressInterval = 200;     // set to time between updates (milli-seconds)
+			var color = progressColor;
+			
+			var progressAt = progressEnd;
+			var progressTimer;
+			
+			function progress_update() {
+			        progressAt++;
+			        if (progressAt > progressEnd) {
+			          progressAt = 1;
+			          if (color == progressColor) {
+			            color = 'transparent';
+			          } else {
+			            color = progressColor;
+			          }
+			        }
+			        document.getElementById('box'+progressAt).style.backgroundColor = color;
+			        progressTimer = setTimeout('progress_update()',progressInterval);
+			}
+			progress_update();              // start progress bar
+		</script>    
+</body>
+</html>
