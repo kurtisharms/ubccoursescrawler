@@ -11,15 +11,13 @@ Requirements:
 - BeautifulSoup4 (install via easy_install or pip)
 
 Useage instructions:
-1) Copy/paste the list of courses that you would like to register for in courseList.csv
-
-2) Run "python crawler.py" at the command-line
-
-3) See your available courses, sorted by day and time, in courseList.html!
+- Copy/paste the list of courses that you would like to register for in courseList.csv
+- Run "python crawler.py" at the command-line
+- See your available courses, sorted by day and time, in courseList.html!
 
 NOTE: this program used to also have the ability to directly register for courses automatically, but this functionality was buggy for two reasons:
-1) Login information was challenging
-2) While it was relatively easy for the program to receive a ranking of course preferences, it was difficult (as the user) to rank these courses ahead of time, especially without knowing which courses overlapped and needed to be directly compared.
+- Login information was challenging
+- While it was relatively easy for the program to receive a ranking of course preferences, it was difficult (as the user) to rank these courses ahead of time, especially without knowing which courses overlapped and needed to be directly compared.
 
 Therefore, I have removed the automatic course signup functionality and instead opted for outputting an html file which creates a table of available courses, sorted by day and block.
 
