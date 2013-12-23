@@ -17,7 +17,7 @@ Useage instructions:
 
 NOTE: this program used to also have the ability to directly register for courses automatically, but this functionality has been removed for three reasons:
 - Login information was challenging
-- Could easily allow the user to expoloit access ot the UBC SSC website, violating UBC's terms of use (the existence of the program itself would not be in violation, however, but I do not wish to encourage irresponsible useage)
+- Could easily allow the user to exploit access ot the UBC SSC website, violating UBC's terms of use (the existence of the program itself would not be in violation, however, but I do not wish to encourage irresponsible useage)
 - While it was relatively easy for the program to receive a ranking of course preferences, it was difficult (as the user) to rank these courses ahead of time, especially without knowing which courses overlapped and needed to be directly compared.
 
 For the reasons stated above, I have removed the automatic course signup functionality and instead opted for outputting an html file which creates a table of available courses, sorted by day and block.
