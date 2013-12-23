@@ -18,35 +18,12 @@ DEBUG = False
 # Get general information from the soup
 
 
-##response = urllib2.urlopen('https://courses.students.ubc.ca/cs/main?pname=subjarea&tname=sectsearch')
-##html=response.read()
 s = requests.Session()
 response = s.get('https://courses.students.ubc.ca/cs/main?pname=subjarea&tname=sectsearch')
 soup = BeautifulSoup(response.text)
 
 url = 'https://courses.students.ubc.ca' + soup.find_all('form')[2]['action'].strip()
-# Setup cookie information
-#cj = cookielib.CookieJar()
-#opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-#opener.addheaders = [
-#    ('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:22.0) Gecko/20100101 Firefox/22.0'),
-#    ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'),
-#    ('Accept-Language', 'en-US,en;q=0.5'),
-#    ('Accept-Encoding', 'gzip, deflate') ]
-#Cookie = 'JSESSIONID=D270B231DD097EA7FD4F71B3D83DCF27; csjdk6=R4100201935;'
-#Cookie = ''
-#jsessionid = ''
-#home = opener.open('https://courses.students.ubc.ca/cs/main?newSession=true')
-#for cookie in cj:
-#    Cookie = '; ' + cookie.name + '=' + cookie.value + Cookie
-#    if cookie.name == 'JSESSIONID':
-#        jsessionid = cookie.value
-#    print cookie.name
-#Cookie = Cookie + '; __utma=262286286.959687102.1372651019.1372651019.1372651019.1; __utmb=262286286.1.10.1372651019; __utmc=262286286; __utmz=262286286.1372651019.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
-#Cookie = Cookie[2:]
-# MANUAL COOKIE OVERRIDE
-#Cookie = 'JSESSIONID=6179E9BF99C65F7CF002C7DBBE5FEE6D; __utma=262286286.1441378196.1372649322.1372658209.1372709093.3; __utmz=262286286.1372649322.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmb=262286286.7.10.1372709093; csjdk6=R4021931149; __utmc=262286286'
-#print "Our cookie is: " + Cookie
+
 Cookie = ''
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:22.0) Gecko/20100101 Firefox/22.0',
@@ -57,8 +34,7 @@ headers = {
     'Accept-Encoding': 'gzip, deflate',
     'Cookie': Cookie
 }
-#url = 'https://courses.students.ubc.ca/cs/main' + ';jsessionid=' + jsessionid + '#search_results'
-#url = 'https://courses.students.ubc.ca/cs/main#search_results'
+
 values = {'subj' : 'HIST',
           'crsno' : '102',
           'SECTION_SEARCH_KEYWORD' : '',
@@ -71,10 +47,7 @@ values = {'subj' : 'HIST',
           'scrsz' : '20',
           'submit' : 'Search+for+Sections'}
 
-##data = urllib.urlencode(values)
-##req = urllib2.Request(url, data=data, headers=headers)
-##response = urllib2.urlopen(req)
-##the_page = response.read()
+
 response = s.post(url,data=values,headers=headers)
 the_page = response.text
 if DEBUG:
@@ -117,8 +90,6 @@ class Course:
 
 
 def getCourses(currentCourseList, subj, courseNumber,description,prereq):
-    
-    #url = 'https://courses.students.ubc.ca/cs/main' + ';jsessionid=' + jsessionid + '#search_results'
     print 'URL = ' + url
     values = {'subj' : subj.strip(),
           'crsno' : str(courseNumber).strip(),
@@ -132,10 +103,6 @@ def getCourses(currentCourseList, subj, courseNumber,description,prereq):
           'scrsz' : '20',
           'submit' : 'Search+for+Sections'}
 
-    ##data = urllib.urlencode(values)
-    ##req = urllib2.Request(url, data=data, headers=headers)
-    ##response = urllib2.urlopen(req)
-    ##the_page = response.read()
     response = s.post(url,data=values,headers=headers)
     the_page = response.text
     if DEBUG:
