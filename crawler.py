@@ -1,15 +1,9 @@
-import urllib
-import urllib2
 import requests
 import time
-from libs.grabber import urlgrab
-from libs.progress import text_progress_meter
 from bs4 import BeautifulSoup
-import cookielib
 import re
 import sys
 from datetime import datetime
-import operator
 
 # BeautifulSoup needs a bigger recursion to parse the latest.php file
 sys.setrecursionlimit(9000)
@@ -35,6 +29,8 @@ headers = {
     'Accept-Encoding': 'gzip, deflate',
     'Cookie': Cookie
 }
+
+values = { }
 
 response = s.post(url,data=values,headers=headers)
 the_page = response.text
@@ -153,7 +149,7 @@ def getCourses(currentCourseList, subj, courseNumber,description,prereq):
 def writeCourseListRow(html, course, color):
     """ Writes table row for a given course in html format """
     if color == True:
-        html += '<tr style="background-color:blue;color:white">'
+        html += '<tr class="odd">'
     else:
         html += '<tr style="">'
     html += '<td>' + course.space + '</td>'
@@ -173,9 +169,9 @@ def writeCourseListRow(html, course, color):
 def writeCourseList(CourseList):
     """ Writes a table to an html file containing all course information """
     f = open('courseList.html','w')
-    html = '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"><style>body { font-family:Arial;font-size:1.2em;}</style><title>Course List</title></head><body>'
+    html = '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"><style>body { font-family:Arial;font-size:1.2em;} .odd { background-color:blue;color:white; } .odd a { color:white; }</style><title>Course List</title></head><body>'
     
-    html += '<h1>UBC Course Planner updated on: ' + str(datetime.now()) + '</h1>'
+    html += '<h1>UBC Course Crawler updated course list on: ' + str(datetime.now()) + '</h1>'
 
     # We have course lists for each table. For example, T!MWFCourseList is for Term 1 courses which fall on Monday, Wednesday and Friday
     T1MWFCourseList = []
@@ -208,7 +204,8 @@ def writeCourseList(CourseList):
     color = True
     # Select Term 1 MWF courses
     html += '<h2>Term 1 - Monday/Wednesday/Friday Courses</h2>'
-    html += '<table cellpadding="10px">'
+    html += '<table cellpadding="10px"'
+    html += '<tr><th>Status</th><th>Subject</th><th>Number</th><th>Section</th><th>Term</th><th>Days</th><th>Start</th><th>End</th><th></th><th>Comments</th><th>Pre-reqs</th></tr>'
     for course in T1MWFCourseList:
         html = writeCourseListRow(html, course, color)
         if color == True:
@@ -220,6 +217,7 @@ def writeCourseList(CourseList):
     # Select Term 1 TT courses
     html += '<h2>Term 1 - Tuesday/Thursday Courses</h2>'
     html += '<table cellpadding="10px">'
+    html += '<tr><th>Status</th><th>Subject</th><th>Number</th><th>Section</th><th>Term</th><th>Days</th><th>Start</th><th>End</th><th></th><th>Comments</th><th>Pre-reqs</th></tr>'
     for course in T1TTCourseList:
         html = writeCourseListRow(html, course, color)
         if color == True:
@@ -231,6 +229,8 @@ def writeCourseList(CourseList):
     # Select Term 2 MWF courses
     html += '<h2>Term 2 - Monday/Wednesday/Friday Courses</h2>'
     html += '<table cellpadding="10px">'
+    html += '<tr><th>Status</th><th>Subject</th><th>Number</th><th>Section</th><th>Term</th><th>Days</th><th>Start</th><th>End</th><th></th><th>Comments</th><th>Pre-reqs</th></tr>'
+
     for course in T2MWFCourseList:
         html = writeCourseListRow(html, course, color)
         if color == True:
@@ -242,6 +242,8 @@ def writeCourseList(CourseList):
     # Select Term 2 TT courses
     html += '<h2>Term 2 - Tuesday/Thursday Courses</h2>'
     html += '<table cellpadding="10px">'
+    html += '<tr><th>Status</th><th>Subject</th><th>Number</th><th>Section</th><th>Term</th><th>Days</th><th>Start</th><th>End</th><th></th><th>Comments</th><th>Pre-reqs</th></tr>'
+
     for course in T2TTCourseList:
         html = writeCourseListRow(html, course, color)
         if color == True:
@@ -253,6 +255,8 @@ def writeCourseList(CourseList):
     # Select both term courses
     html += '<h2>Term 1 and 2 courses - mix of days</h2>'
     html += '<table cellpadding="10px">'
+    html += '<tr><th>Status</th><th>Subject</th><th>Number</th><th>Section</th><th>Term</th><th>Days</th><th>Start</th><th>End</th><th></th><th>Comments</th><th>Pre-reqs</th></tr>'
+
     for course in T12CourseList:
         html = writeCourseListRow(html, course, color)
         if color == True:
