@@ -116,34 +116,48 @@ def getCourses(currentCourseList, subj, courseNumber,description,prereq):
     
     for i in range(len(soup.find_all("tr", { "class" : re.compile(r"section[1-2]") }))):
         tr = soup.find_all("tr", { "class" : re.compile(r"section[1-2]") })[i]
+
+        # Initialize some values that may not always have a value
+
         courseName = tr.a.string.strip().split()
+        courseName = [c.replace(u'\xa0', u' ') for c in courseName]
         # The ubc doc works like this: section1 tontains the name
         # soup.find_all("tr", class_="section1")[1].find_all('td')[X]
         # X:0: Full or space, to indicate class size
-        space = tr.find_all('td')[0].string
+        space = tr.find_all('td')[0].string or ""
+        space = space.replace(u'\xa0', u' ')
         # X=1: Ignore... better to use 'a' tag to get course name
         # X=2: Discussion or Lecture
-        type = tr.find_all('td')[2].string
+        type = tr.find_all('td')[2].string or ""
+        type = type.replace(u'\xa0', u' ')
         # X=3: '1' or '2' or '1-2'  (to indicate term) 
-        term = tr.find_all('td')[3].string
+        term = tr.find_all('td')[3].string or ""
+        term = term.replace(u'\xa0', u' ')
         # X=4: Interval... ignore
         # X=5: Fri... indicates days, by first three letters
-        days = tr.find_all('td')[5].string
+        days = tr.find_all('td')[5].string or ""
+        days = days.replace(u'\xa0', u' ')
         # X=6: Start time in 24hour format
-        startTime = tr.find_all('td')[6].string
+        startTime = tr.find_all('td')[6].string or ""
+        startTime = startTime.replace(u'\xa0', u' ')
         # X=7: End time in 24hour format
-        endTime = tr.find_all('td')[7].string
+        endTime = tr.find_all('td')[7].string or ""
+        endTime = endTime.replace(u'\xa0', u' ')
         # X=8: Section comments
-        comments = tr.find_all('td')[8].string
+        comments = tr.find_all('td')[8].string or ""
+        comments = comments.replace(u'\xa0', u' ')
         # soup.find_all("tr", class_="section1")[0].a['href'] to get url
-        href = tr.a['href']
+        href = tr.a['href'] or ""
+        href = href.replace(u'\xa0', u' ')
         # Fix time objects to ensure that they are 24 hours XX:XX format
         if len(str(startTime).split(':')[0]) < 2:
                startTime = '0' + startTime
         if len(str(endTime).split(':')[0]) < 2:
                endTime = '0' + endTime
-        # (subject, courseNumber, sectionNumber, space, type, term, days, startTime, endTime, comments)
-        currentCourseList.append(Course(str(courseName[0]),str(courseName[1]),str(courseName[2]),str(space),str(type),str(term),str(days),str(startTime),str(endTime),str(comments),str(href),description,prereq))
+        # (subject, courseNumber, sectionNumber, space, type, term, days, startTime, endTime, comments
+        #currentCourseList.append(Course(courseName[0].encode('utf-8'),courseName[1].encode('utf-8'),courseName[2].encode('utf-8'),space.encode('utf-8'),type.encode('utf-8'),term.encode('utf-8'),days.encode('utf-8'),startTime.encode('utf-8'),endTime.encode('utf-8'),comments.encode('utf-8'),href.encode('utf-8'),description.encode('utf-8'),prereq.encode('utf-8')))
+        currentCourseList.append(Course(str(courseName[0]),str(courseName[1]),str(courseName[2]),str(space),str(type),str(term),str(days),str(startTime),str(endTime),str(comments),str(href),str(description),str(prereq)))
+
     return currentCourseList
 
 
@@ -233,7 +247,7 @@ def writeCourseList(CourseList):
             color = True
     html += '</table>'
             
-    # Select Term TT courses
+    # Select Term 2 TT courses
     html += '<h2>Term 2 - Tuesday/Thursday Courses</h2>'
     html += '<table cellpadding="10px">'
     for course in T2TTCourseList:
