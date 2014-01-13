@@ -10,14 +10,15 @@ import re
 import sys
 from datetime import datetime
 import operator
+
 # BeautifulSoup needs a bigger recursion to parse the latest.php file
 sys.setrecursionlimit(9000)
 
 
 DEBUG = False
-# Get general information from the soup
 
 
+# Get a session ID with UBC's servers
 s = requests.Session()
 response = s.get('https://courses.students.ubc.ca/cs/main?pname=subjarea&tname=sectsearch')
 soup = BeautifulSoup(response.text)
@@ -60,7 +61,7 @@ soup.find_all("tr", class_="section1")
 
     
 
-# The ubc doc works like this: section1 tontains the name
+# The ubc doc works like this: section1 contains the name
 # soup.find_all("tr", class_="section1")[1].find_all('td')[X]
 # X:0: Full or space, to indicate class size
 # X=1: Ignore... better to use 'a' tag to get course name
@@ -90,6 +91,7 @@ class Course:
 
 
 def getCourses(currentCourseList, subj, courseNumber,description,prereq):
+    """ Returns a list of courses, with all information contained for each course """
     print 'URL = ' + url
     values = {'subj' : subj.strip(),
           'crsno' : str(courseNumber).strip(),
@@ -162,6 +164,7 @@ def getCourses(currentCourseList, subj, courseNumber,description,prereq):
 
 
 def writeCourseListRow(html, course, color):
+    """ Writes table row for a given course in html format """
     if color == True:
         html += '<tr style="background-color:blue;color:white">'
     else:
@@ -181,6 +184,7 @@ def writeCourseListRow(html, course, color):
     return html
 
 def writeCourseList(CourseList):
+    """ Writes a table to an html file containing all course information """
     f = open('courseList.html','w')
     html = '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"><style>body { font-family:Arial;font-size:1.2em;}</style><title>Course List</title></head><body>'
     
@@ -306,5 +310,3 @@ else:
     print "\nERROR! Invalid command... please rerun script" 
     
 print "Reached the end of the program"
-    
- 
