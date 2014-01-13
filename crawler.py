@@ -36,19 +36,6 @@ headers = {
     'Cookie': Cookie
 }
 
-values = {'subj' : 'HIST',
-          'crsno' : '102',
-          'SECTION_SEARCH_KEYWORD' : '',
-          'actv' : '--Any--',
-          'credit' : '',
-          'term' : '--Any--',
-          'seat' : '--Any--',
-          'sTime' : '',
-          'eTime' : '',
-          'scrsz' : '20',
-          'submit' : 'Search+for+Sections'}
-
-
 response = s.post(url,data=values,headers=headers)
 the_page = response.text
 if DEBUG:
@@ -190,6 +177,7 @@ def writeCourseList(CourseList):
     
     html += '<h1>UBC Course Planner updated on: ' + str(datetime.now()) + '</h1>'
 
+    # We have course lists for each table. For example, T!MWFCourseList is for Term 1 courses which fall on Monday, Wednesday and Friday
     T1MWFCourseList = []
     T1TTCourseList = []
     T2MWFCourseList = []
@@ -277,7 +265,7 @@ def writeCourseList(CourseList):
     f.write(html)
     f.close()        
 
-print "Welcome to the UBC Course Lister"
+print "Welcome to the UBC Course Crawler"
 print "Let us get to work..."
 operation = input("Do you want to (1) look up the courses in the file or (2) look up a specific course: ")
 CourseList = []
