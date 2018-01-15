@@ -1,5 +1,9 @@
 # UBC Course Crawler
 
+## Disclaimer and Terms of Use
+Your use of this software is deemed acceptance of the these terms. This software is offered without any warranties or conditions, express or implied, as to its use, functionality, or legality. The authors will not be held responsible for your use of this software and any consequences arising from your use of this software. The authors note that since this software was first developed, the University of British Columbia ("UBC") has updated its website policies and it may no longer be possible to legally use this software as was originally intended. You should seek independent legal advice before using this software in order to ascertain whether the software can be legally used in keeping with all UBC website terms of use and UBC policies. The authors will not be held responsible for illegal or non-compliant use of this software in contravention of any UBC policies. The authors will furthermore not be held liable for any use of modified versions of this software.
+
+## About
 UBC Course Crawler automatically looks up a list of courses, and then creates a table of available courses, sorted by day and block. Specifically, it groups courses by Mon/Wed/Fri or Tue/Thur, so that you may efficiently register for your courses. This program can check course availability for 100 courses in less than 2 minutes and then automatically sort them; to do that manually would take several hours.
 
 NOTE: this program has an intentional pause between requests to UBC's SSC website, so as not to slow the server down. Please do not change this.
